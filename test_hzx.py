@@ -4,9 +4,6 @@ import platform
 import shutil
 
 if __name__ == '__main__':
-    # if len(sys.argv) != 2:
-    #     print("Usage: python test.py <galaxy_name>")
-    # name = sys.argv[1]
     name = 'NGC1326'
 
     os_name = platform.system()
