@@ -2,3 +2,6 @@ CGS/
 galfit*
 *.fits
 .DS_Store
+
+*pdf
+__pycache__/*

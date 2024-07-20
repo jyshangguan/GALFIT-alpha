@@ -58,7 +58,7 @@ class Config:
     def pixel_scale(self):
         value = re.split(r'\s+', self.__pixel_scale__.value)
         dx, dy = float(value[0]), float(value[1])
-        return np.sqrt(dx**2+dy**2)
+        return np.sqrt(dx**2+dy**2) * 3600
 
     @property
     def zeropoint(self):
@@ -122,4 +122,4 @@ class GalfitTask:
         self.config.galfit_mode = galfit_mode
         with open(galfit_file, 'w') as file:
             print(self, file=file)
-        subprocess.run(['./galfit', galfit_file], check=True)
+        subprocess.run(['galfit', galfit_file], check=True)
